@@ -8,6 +8,6 @@ Duo Outbound Provisioning Connector allows to provision the users into Duo API f
 
 ### How You Can Contribute
 
-You can create a third party connector and publish in WSO2 Connector Store.
+You can create a third party connector and publish in WSO2 Store.
 
 https://docs.wso2.com/display/ISCONNECTORS/Creating+a+Third+Party+Authenticator+or+Connector+and+Publishing+in+WSO2+Store

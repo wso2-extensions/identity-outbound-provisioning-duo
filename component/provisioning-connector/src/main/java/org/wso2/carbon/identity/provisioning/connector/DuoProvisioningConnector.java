@@ -101,8 +101,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
      *
      * @throws IdentityProvisioningException
      */
-    private String createUser(ProvisioningEntity provisioningEntity)
-            throws IdentityProvisioningException {
+    private String createUser(ProvisioningEntity provisioningEntity) throws IdentityProvisioningException {
         Object result;
         JSONObject jo;
         String provisionedId = null;
@@ -178,7 +177,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
         phoneNumber = requiredAttributes.get(DuoConnectorConstants.PHONE_NUMBER);
         //updating email and real name fields
         modifyDuoUser(userID, requiredAttributes);
-        if (phoneNumber != null && !phoneNumber.isEmpty()) {
+        if (StringUtils.isNotEmpty(phoneNumber)) {
             //updating phone number
             addPhoneToUser(userID, phoneNumber);
         } else {
@@ -269,7 +268,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
             }
         }
         String currentPhone = getPhoneByUserId(userId);
-        if (phoneID == null) {
+        if (StringUtils.isEmpty(phoneID)) {
             phoneID = createPhone(param);
         } else if (phoneID.equals(currentPhone)) {
             return;

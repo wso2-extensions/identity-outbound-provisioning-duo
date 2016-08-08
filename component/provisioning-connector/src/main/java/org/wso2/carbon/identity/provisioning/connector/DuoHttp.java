@@ -144,7 +144,8 @@ public class DuoHttp {
         proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
     }
 
-    protected String canonRequest(String date, int sig_version) throws UnsupportedEncodingException {
+    protected String canonRequest(String date, int sig_version)
+            throws UnsupportedEncodingException {
         String canon = "";
         if (sig_version == 2) {
             canon += date + "\n";
@@ -160,14 +161,14 @@ public class DuoHttp {
             throws UnsupportedEncodingException {
         ArrayList<String> args = new ArrayList<>();
         ArrayList<String> keys = new ArrayList<>();
+
         for (String key : params.keySet()) {
             keys.add(key);
         }
         Collections.sort(keys);
         for (String key : keys) {
             String name = URLEncoder.encode(key, "UTF-8").replace("+", "%20").replace("*", "%2A").replace("%7E", "~");
-            String value = URLEncoder.encode(params.get(key), "UTF-8").replace("+", "%20").
-                    replace("*", "%2A").replace("%7E", "~");
+            String value = URLEncoder.encode(params.get(key), "UTF-8").replace("+", "%20").replace("*", "%2A").replace("%7E", "~");
             args.add(name + "=" + value);
         }
         return DuoUtil.join(args.toArray(), "&");
