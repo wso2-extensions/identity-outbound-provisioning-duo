@@ -1,4 +1,4 @@
-Duo Security Outbound Provisioning Connector
+### Duo Security Outbound Provisioning Connector
 
 WSO2 IS is one of the best Identity Servers, which enables you to offload your identity and user entitlement management burden totally from your application. It comes with many features, supports many industry standards and most importantly it allows you to extent it according to your security requirements. This repo contains Authenticators written to work with different third party systems.
 
@@ -6,7 +6,7 @@ With WSO2 IS, there are lot of provisioning capabilities available. There are 3 
 
 Duo Outbound Provisioning Connector allows to provision the users into Duo API from WSO2 Identity Server.
 
-How You Can Contribute
+### How You Can Contribute
 
 You can create a third party connector and publish in WSO2 Connector Store.
 
