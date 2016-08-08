@@ -22,14 +22,11 @@ public class DuoConnectorConstants {
 
     public static final String API_USER = "/admin/v1/users";
     public static final String API_PHONE = "/admin/v1/phones";
-
     public static final String SKEY = "skey";
     public static final String IKEY = "ikey";
     public static final String HOST = "host";
-
     public static final String USERNAME = "username";
     public static final String PHONE_NUMBER = "number";
-
     public static final String USER_ID = "user_id";
     public static final String PHONE_ID = "phone_id";
 

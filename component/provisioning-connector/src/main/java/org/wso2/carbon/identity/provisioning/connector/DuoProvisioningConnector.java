@@ -139,7 +139,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
         String userID;
         try {
             userID = provisioningEntity.getIdentifier().getIdentifier().trim();
-            if (userID != null) {
+            if (StringUtils.isNotEmpty(userID)) {
                 httpCall(DuoConnectorConstants.HttpMethods.DELETE, DuoConnectorConstants.API_USER + "/" + userID, null);
             }
         } catch (Exception e) {
@@ -184,7 +184,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
         } else {
             //Removing existing phone number from Duo Account
             String phoneID = getPhoneByUserId(userID);
-            if (phoneID != null) {
+            if (StringUtils.isNotEmpty(phoneID)) {
                 removePhoneFromUser(phoneID, userID);
             }
         }
@@ -208,7 +208,6 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
             if (result != null) {
                 jo = new JSONObject(result.toString());
                 phoneID = jo.getString(DuoConnectorConstants.PHONE_ID);
-
                 if (log.isDebugEnabled()) {
                     log.debug("Created phone in Duo : " + phone.get(DuoConnectorConstants.PHONE_NUMBER));
                 }
@@ -274,7 +273,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
             phoneID = createPhone(param);
         } else if (phoneID.equals(currentPhone)) {
             return;
-        } else if (currentPhone != null) {
+        } else if (StringUtils.isNotEmpty(currentPhone)) {
             removePhoneFromUser(currentPhone, userId);
         }
         param.remove(DuoConnectorConstants.PHONE_NUMBER);

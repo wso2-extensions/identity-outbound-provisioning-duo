@@ -30,8 +30,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class DuoHttp {
-    public static SimpleDateFormat RFC_2822_DATE_FORMAT
-            = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z",
+    public static SimpleDateFormat RFC_2822_DATE_FORMAT = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z",
             Locale.US);
     public static MediaType FORM_ENCODED = MediaType.parse("application/x-www-form-urlencoded");
     Map<String, String> params = new HashMap<>();
@@ -59,10 +58,7 @@ public class DuoHttp {
     public Object executeRequest() throws Exception {
         JSONObject result = new JSONObject(executeRequestRaw());
         if (!result.getString("stat").equals("OK")) {
-            throw new Exception("Duo error code ("
-                    + result.getInt("code")
-                    + "): "
-                    + result.getString("message"));
+            throw new Exception("Duo error code (" + result.getInt("code") + "): " + result.getString("message"));
         }
         return result.get("response");
     }
@@ -91,8 +87,7 @@ public class DuoHttp {
             }
             builder.delete();
         } else {
-            throw new UnsupportedOperationException("Unsupported method: "
-                    + method);
+            throw new UnsupportedOperationException("Unsupported method: " + method);
         }
         Request request = builder.url(url).build();
         // Set up client.
@@ -105,21 +100,17 @@ public class DuoHttp {
         httpclient.setReadTimeout(timeout, TimeUnit.SECONDS);
         // finish and execute request
         builder.headers(headers.build());
-        return httpclient.newCall(builder.build())
-                .execute();
+        return httpclient.newCall(builder.build()).execute();
     }
 
-    public void signRequest(String ikey, String skey)
-            throws UnsupportedEncodingException {
+    public void signRequest(String ikey, String skey) throws UnsupportedEncodingException {
         signRequest(ikey, skey, 2);
     }
 
-    public void signRequest(String ikey, String skey, int sig_version)
-            throws UnsupportedEncodingException {
+    public void signRequest(String ikey, String skey, int sig_version) throws UnsupportedEncodingException {
         String date = formatDate(new Date());
         String canon = canonRequest(date, sig_version);
         String sig = signHMAC(skey, canon);
-
         String auth = ikey + ":" + sig;
         String header = "Basic " + DuoBase64.encodeBytes(auth.getBytes());
         addHeader("Authorization", header);
@@ -153,8 +144,7 @@ public class DuoHttp {
         proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
     }
 
-    protected String canonRequest(String date, int sig_version)
-            throws UnsupportedEncodingException {
+    protected String canonRequest(String date, int sig_version) throws UnsupportedEncodingException {
         String canon = "";
         if (sig_version == 2) {
             canon += date + "\n";
@@ -170,22 +160,14 @@ public class DuoHttp {
             throws UnsupportedEncodingException {
         ArrayList<String> args = new ArrayList<>();
         ArrayList<String> keys = new ArrayList<>();
-
         for (String key : params.keySet()) {
             keys.add(key);
         }
         Collections.sort(keys);
         for (String key : keys) {
-            String name = URLEncoder
-                    .encode(key, "UTF-8")
-                    .replace("+", "%20")
-                    .replace("*", "%2A")
-                    .replace("%7E", "~");
-            String value = URLEncoder
-                    .encode(params.get(key), "UTF-8")
-                    .replace("+", "%20")
-                    .replace("*", "%2A")
-                    .replace("%7E", "~");
+            String name = URLEncoder.encode(key, "UTF-8").replace("+", "%20").replace("*", "%2A").replace("%7E", "~");
+            String value = URLEncoder.encode(params.get(key), "UTF-8").replace("+", "%20").
+                    replace("*", "%2A").replace("%7E", "~");
             args.add(name + "=" + value);
         }
         return DuoUtil.join(args.toArray(), "&");
