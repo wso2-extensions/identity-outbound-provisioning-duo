@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.carbon.identity.provisioning.connector;
+package org.wso2.carbon.identity.provisioning.duo;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -67,7 +67,7 @@ public class DuoProvisioningConnector extends AbstractOutboundProvisioningConnec
             }
             if (provisioningEntity.isJitProvisioning() && !isJitProvisioningEnabled()) {
                 if (log.isDebugEnabled()) {
-                    log.debug("JIT provisioning disabled for Duo connector");
+                    log.debug("JIT provisioning disabled for Duo duo");
                 }
                 return null;
             }

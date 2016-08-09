@@ -15,7 +15,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.wso2.carbon.identity.provisioning.connector.internal;
+package org.wso2.carbon.identity.provisioning.duo.internal;
 /*
  * Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
@@ -38,11 +38,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.osgi.service.component.ComponentContext;
 import org.wso2.carbon.identity.provisioning.AbstractProvisioningConnectorFactory;
-import org.wso2.carbon.identity.provisioning.connector.DuoProvisioningConnectorFactory;
+import org.wso2.carbon.identity.provisioning.duo.DuoProvisioningConnectorFactory;
 
 /**
  * @scr.component name=
- * "org.wso2.carbon.identity.provisioning.connector.duo.internal.DuoConnectorServiceComponent"
+ * "org.wso2.carbon.identity.provisioning.duo.duo.internal.DuoConnectorServiceComponent"
  * immediate="true"
  */
 public class DuoConnectorServiceComponent {
