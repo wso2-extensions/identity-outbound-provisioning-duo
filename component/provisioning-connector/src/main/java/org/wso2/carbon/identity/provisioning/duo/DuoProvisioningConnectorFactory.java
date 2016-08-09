@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.carbon.identity.provisioning.connector;
+package org.wso2.carbon.identity.provisioning.duo;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -39,7 +39,7 @@ public class DuoProvisioningConnectorFactory extends AbstractProvisioningConnect
         DuoProvisioningConnector connector = new DuoProvisioningConnector();
         connector.init(provisioningProperties);
         if (log.isDebugEnabled()) {
-            log.debug("Duo provisioning connector created successfully.");
+            log.debug("Duo provisioning duo created successfully.");
         }
         return connector;
     }
@@ -80,5 +80,4 @@ public class DuoProvisioningConnectorFactory extends AbstractProvisioningConnect
 
         return configProperties;
     }
-
 }

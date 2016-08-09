@@ -19,11 +19,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.wso2.carbon.extension.identity.provisioning</groupId>
-        <artifactId>org.wso2.carbon.extension.identity.provisioning.connector</artifactId>
+        <artifactId>org.wso2.carbon.extension.identity.provisioning.duo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>org.wso2.carbon.extension.identity.provisioning.connector.duo.feature</artifactId>
+    <artifactId>org.wso2.carbon.extension.identity.provisioning.duo.feature</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon - Identity Duo Provisioning Feature</name>
@@ -32,7 +32,7 @@
     <dependencies>
         <dependency>
             <groupId>org.wso2.carbon.extension.identity.provisioning</groupId>
-            <artifactId>org.wso2.carbon.extension.identity.provisioning.connector.duo</artifactId>
+            <artifactId>org.wso2.carbon.extension.identity.provisioning.duo.connector</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
@@ -50,7 +50,7 @@
                             <goal>p2-feature-gen</goal>
                         </goals>
                         <configuration>
-                            <id>org.wso2.carbon.extension.identity.provisioning.connector.duo</id>
+                            <id>org.wso2.carbon.extension.identity.provisioning.duo.connector</id>
                             <propertiesFile>feature.properties</propertiesFile>
                             <adviceFile>
                                 <properties>
@@ -60,7 +60,7 @@
                             </adviceFile>
                             <bundles>
                                 <bundleDef>
-                                    org.wso2.carbon.extension.identity.provisioning:org.wso2.carbon.extension.identity.provisioning.connector.duo
+                                    org.wso2.carbon.extension.identity.provisioning:org.wso2.carbon.extension.identity.provisioning.duo.connector
                                 </bundleDef>
                             </bundles>
                         </configuration>

@@ -13,6 +13,6 @@ Tested Platform:
 Do the following:
 
 Deploying and Configuring Tiqr artifacts:
-1.  Build < DUO_PROVISIONING_COMNNECTOR_HOME>/component/authenticator & copy the org.wso2.carbon.identity.provisioning.connector.duo-1.0.0-SNAPSHOT.jar into <IS-HOME>/repository/components/dropins
+1.  Build < DUO_PROVISIONING_COMNNECTOR_HOME>/component/provisioning-connector & copy the org.wso2.carbon.identity.provisioning.duo.connector-1.0.0-SNAPSHOT.jar into <IS-HOME>/repository/components/dropins
 
-2.  Follow the steps in https://docs.wso2.com/display/ISCONNECTORS/Configuring+Duo+Provisioning
+2.  Follow the steps in https://docs.wso2.com/display/ISCONNECTORS/Configuring+Duo+Security+Provisioning+Connector

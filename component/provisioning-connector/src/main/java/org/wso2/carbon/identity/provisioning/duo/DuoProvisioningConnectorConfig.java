@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.carbon.identity.provisioning.connector;
+package org.wso2.carbon.identity.provisioning.duo;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

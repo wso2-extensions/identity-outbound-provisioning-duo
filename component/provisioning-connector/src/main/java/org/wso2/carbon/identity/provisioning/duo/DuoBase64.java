@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.carbon.identity.provisioning.connector;
+package org.wso2.carbon.identity.provisioning.duo;
 
 public class DuoBase64 {
     /**
@@ -308,6 +308,12 @@ public class DuoBase64 {
     };
 
     /**
+     * Defeats instantiation.
+     */
+    private DuoBase64() {
+    }
+
+    /**
      * Determine which alphabet
      * Returns one of the _SOMETHING_ALPHABET byte arrays depending on the
      * options specified.
@@ -334,12 +340,6 @@ public class DuoBase64 {
         } else {
             return _STANDARD_DECODABET;
         }
-    }
-
-    /**
-     * Defeats instantiation.
-     */
-    private DuoBase64() {
     }
 
     /**
