@@ -17,8 +17,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.wso2.carbon.extension.identity.provisioning</groupId>
-        <artifactId>org.wso2.carbon.extension.identity.provisioning.duo</artifactId>
+        <groupId>org.wso2.carbon.extension.identity.provisioning.outbound.duo</groupId>
+        <artifactId>identity-outbound-provisioning-duo</artifactId>
         <version>1.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -30,7 +30,7 @@
     <description>This feature contains extension feature for Duo</description>
     <dependencies>
         <dependency>
-            <groupId>org.wso2.carbon.extension.identity.provisioning</groupId>
+            <groupId>org.wso2.carbon.extension.identity.provisioning.outbound.duo</groupId>
             <artifactId>org.wso2.carbon.extension.identity.provisioning.duo.connector</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -59,7 +59,7 @@
                             </adviceFile>
                             <bundles>
                                 <bundleDef>
-                                    org.wso2.carbon.extension.identity.provisioning:org.wso2.carbon.extension.identity.provisioning.duo.connector
+                                    org.wso2.carbon.extension.identity.provisioning.outbound.duo:org.wso2.carbon.extension.identity.provisioning.duo.connector
                                 </bundleDef>
                             </bundles>
                         </configuration>
