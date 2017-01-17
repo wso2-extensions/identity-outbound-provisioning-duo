@@ -30,7 +30,7 @@
     <url>http://wso2.org</url>
     <properties>
         <!--Carbon identity version-->
-        <carbon.identity.version>5.0.7</carbon.identity.version>
+        <carbon.identity.version>5.2.2</carbon.identity.version>
         <!-- Carbon kernel version -->
         <carbon.kernel.version>4.4.3</carbon.kernel.version>
         <commons-logging.version>4.4.3</commons-logging.version>
