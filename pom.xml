@@ -53,31 +53,6 @@
             <artifactId>org.wso2.carbon.identity.provisioning</artifactId>
             <version>${carbon.identity.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.core</artifactId>
-            <version>${carbon.kernel.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.user.core</artifactId>
-            <version>${carbon.kernel.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
-            <artifactId>org.wso2.carbon.idp.mgt</artifactId>
-            <version>${carbon.identity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
-            <artifactId>org.wso2.carbon.identity.application.common</artifactId>
-            <version>${carbon.identity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
-            <artifactId>org.wso2.carbon.identity.application.mgt</artifactId>
-            <version>${carbon.identity.version}</version>
-        </dependency>
     </dependencies>
     <scm>
         <connection>scm:git:https://github.com/wso2-extensions/identity-outbound-provisioning-duo.git</connection>
