@@ -47,7 +47,7 @@ import org.wso2.carbon.identity.provisioning.duo.DuoProvisioningConnectorFactory
  */
 public class DuoConnectorServiceComponent {
 
-    private static Log log = LogFactory.getLog(DuoConnectorServiceComponent.class);
+    private static final Log log = LogFactory.getLog(DuoConnectorServiceComponent.class);
 
     protected void activate(ComponentContext context) {
         if (log.isDebugEnabled()) {
