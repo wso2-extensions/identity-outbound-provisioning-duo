@@ -24,15 +24,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.carbon.extension.identity.provisioning.outbound.duo</groupId>
     <artifactId>identity-outbound-provisioning-duo</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon Extension - Duo Pom</name>
     <url>http://wso2.org</url>
     <properties>
         <!--Carbon identity version-->
-        <carbon.identity.version>5.2.2</carbon.identity.version>
+        <carbon.identity.version>5.17.5</carbon.identity.version>
         <!-- Carbon kernel version -->
-        <carbon.kernel.version>4.4.3</carbon.kernel.version>
+        <carbon.kernel.version>4.6.0</carbon.kernel.version>
         <commons-logging.version>4.4.3</commons-logging.version>
     </properties>
     <profiles>
@@ -49,7 +49,7 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.identity.provisioning</artifactId>
             <version>${carbon.identity.version}</version>
         </dependency>
@@ -64,17 +64,17 @@
             <version>${carbon.kernel.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.idp.mgt</artifactId>
             <version>${carbon.identity.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.identity.application.common</artifactId>
             <version>${carbon.identity.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.identity.application.mgt</artifactId>
             <version>${carbon.identity.version}</version>
         </dependency>
