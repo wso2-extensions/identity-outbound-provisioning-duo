@@ -84,8 +84,7 @@
                             org.wso2.carbon.identity.provisioning.duo.internal
                         </Private-Package>
                         <Import-Package>
-                            !org.wso2.carbon.identity.provisioning.duo.*,
-                            org.wso2.carbon.identity.provisioning.*;version="${carbon.identity.version.range}",
+                            org.wso2.carbon.identity.provisioning;version="${carbon.identity.version.range}",
                             org.wso2.carbon.idp.mgt.*;version="${carbon.identity.version.range}",
                             org.wso2.carbon.identity.application.common.*;version="${carbon.identity.version.range}",
                             org.wso2.carbon.identity.application.mgt.*;version="${carbon.identity.version.range}",
